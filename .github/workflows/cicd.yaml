@@ -19,6 +19,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/myapp20sep:latest
+          tags: |
+             ${{secrets.DOCKER_USERNAME}}/myapp20sep:latest
+             ${{secrets.DOCKER_USERNAME}}/myapp20sep:${{github.sha}}
 
        
